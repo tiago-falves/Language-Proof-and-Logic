@@ -1,0 +1,28 @@
+7.2.4.28445wnds:Windows 86.2SntFC1541590922088D1541593631669D1541593876992D1541593877191D1541594139936D1541594140103D1541594221095D1541594221240D1541594719499D1541594719687D1541595891772C1542141456409D1542141486512S3209710;@x(Tet(x)$x está à frente de todos os dodec)
+@x[Tet(x)$@y(Dodec(y) $ FrontOf(x,y))]
+;@x[~Tet(x)|@y(~(Dodec(y)|FronyOf(x,y))]
+;@x@y[~(Tet(x)&Dodec(y))|FrontOf(x,y)]
+;@x@y[(Tet(x)&Dodec(y))$FrontOf(x,y)];@x[Dodec(x) $não tem um objeto atras de si ]
+@x[Dodec(x) $ ~/y(BackOf(y,x))]
+;@x@y[Dodec(x)$~BackOf(y,x)]  (leis de morgan?);@x[Tet(x) $ não existe um cube do mesmo tamanho que x]
+@x[Tet(x) $ ~/y(Cube(y) & SameSize(x,y))]
+;@x@y[(Tet(x)&Cube(y))$SameSize(x,y)];@x(Dodec(x) $ existe um cubo que tem o mesmo tamanho que o x) 
+@x[Dodec(x) $ /y(Cube(y) & SameSize(x,y))];ir por passos não resulta, mas resulta reformular a frase antes 
+@x@y@z((Dodec(x) & Dodec(y) & Between(z,y,x) )$ Cube(z));@x{Cube(x) $ existem dois objetos tais que....
+@x [Cube(x) $ /y/z (Between(x, y, z))];@x[Cube(x) & existe um objeto atrás de x $ Small(x)]
+@x[(Cube(x) & /y(BackOf(y,x))) $ Small(x)]
+;@x[~(Cube(x) & /yBackOf(y,x)) | Small(x)]
+;@x[~Cube(x) | ~/yBackOf(y,x) | Small(x)]
+;@x[~Cube(x) | @y~BackOf(y,x) | Small(x)]
+;@x[~(Cube(x) & @yBackOf(y,x)) | Small(x)]
+;@x@y[(Cube(x) & BackOf(y,x)) $ Small(x)];@[Dodec(x) & não existe nada à direita de x $ Small(x)]
+@x[(Dodec(x) & ~/y(RightOf(y,x)))$ Small(x)];@[Dodec(x) & não existe nada à direita de x $ existe um objeto à esquerda de x]
+@x[(Dodec(x) & ~/z(RightOf(z,x)))$ /y(LeftOf(y,x))];@x[Dodec(x) & existe um cubo à esquerda do qual x se encontra $ large(x)]
+@x[(Dodec(x) & /y(Cube(y)&LeftOf(x,y))) $ Large(x)]
+;@x[~(Dodec(x) & /y(Cube(y)&LeftOf(x,y))) | Large(x)]
+;@x[~Dodec(x) | ~/y(Cube(y)&LeftOf(x,y)) | Large(x)]
+;@x[~Dodec(x) | @y~(Cube(y)&LeftOf(x,y)) | Large(x)]
+;@x@y[~Dodec(x) | ~(Cube(y)&LeftOf(x,y)) | Large(x)]
+;@x@y[~Dodec(x) | ~Cube(y)| ~LeftOf(x,y)| Large(x)]
+;@x@y[~(Dodec(x) & Cube(y) & LeftOf(x,y))| Large(x)]
+;@x@y[(Dodec(x) & Cube(y) & LeftOf(x,y)) $ Large(x)]s=314954;

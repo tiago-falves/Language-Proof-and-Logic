@@ -1,0 +1,16 @@
+7.2.4.28445wnds:Windows 86.2SntFC1541973024524D1541973182334C1542052739700D1542053498603D1542054073143D1542054073321S1726315@x(Cube(x)$ Small(x))
+;Todos os cubos são pequenos. @x((Cube(x) & Small(x))$RightOf(x,a))
+;Cada cubo pequeno está à direita de a@x(Dodec(x) $LeftOf(a,x))
+;a está à esquerda de cada dodecaedro@x((Dodec(x) & Medium(x)) $ FrontOf(x,b))
+;Cada dodecaedro médio está à frente de b@x(Cube(x) $ (FrontOf(x,b) | BackOf(x,a)))
+;Cada cubo está à frente de b ou atrás de a@x(Cube(x)$(RightOf(x,a) & LeftOf(x,b)))
+;Cada cubo está à direita de a e à esquerda de b@x(Between(x,a,b) $ Cube(x))
+;Tudo entre a e b é cubo@x(Smaller(x,a) $ Cube(x))
+;Tudo o que é menor que a é cubo@x(Dodec(x)$ ~Small(x))
+;Todos  os  dodecaedros  não  são  pequenos@x(Dodec(x)$~Small(x))
+;Nenhum dodecaedro é pequeno. ~@x(Adjoins(a,x))
+;a  não  é  adjacente  a  tudo  (esta  frase  é  ambígua;  interprete-a  como  a  negação  da  frase a é adjacente a tudo)@x(~Adjoins(a,x))
+;a não é adjacente a coisa alguma@x(Cube(x) $ ~RightOf(a, x))
+;a não está à direita de nenhum cubo@x(Cube(x) $( ~SameCol(x,a) & ~SameCol(x,b)))
+;Se alguma coisa é um cubo, então não está na mesma coluna de a ou de b@x(Cube(x) % (~SameCol(x,a) & ~SameCol(x,b)))
+;Alguma coisa é um cubo se e só se não está na mesma coluna de a ou de bs=210634;

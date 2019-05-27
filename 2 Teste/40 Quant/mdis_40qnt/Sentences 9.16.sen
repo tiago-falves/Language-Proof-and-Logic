@@ -1,0 +1,16 @@
+7.2.4.28445wnds:Windows 86.2SntFC1541972306564D1541972911984D1541972994334C1542053647089D1542053927804D1542053928013D1542053928213S1994015/x(Large(x))
+;Algo é grande/x(Cube(x))
+;Algum objeto é cubo/x(Cube(x) & Large(x))
+;Alguma coisa é um cubo grande/x(Cube(x) & Large(x))
+;Algum cubo é grande/x(Cube(x) & Large(x) & LeftOf(x,b))
+;Algum cubo grande está à esquerda de b/x(Cube(x) & Large(x) & LeftOf(x,b))
+;Um cubo grande está à esquerda de b./x(Cube(x) & Large(x) & LeftOf(x,b))
+;b tem um cubo grande à sua esquerda.;/x(Cube(x) & Large(x) & RightOf(b,x))
+;b está à direita de um cubo grande/x(LeftOf(x,b) & BackOf(x,c))
+;Alguma coisa à esquerda de b está atrás de c./x(Cube(x) & Large(x) & LeftOf(x,b)  & BackOf(x,c))
+;Um cubo grande à esquerda de b está atrás de c./x(Cube(x) & Large(x) & LeftOf(x,b)  & BackOf(x,c))
+;Algum cubo grande está à esquerda de b e atrás de c./x(Dodec(x) & ~Large(x))
+;Algum dodecaedro não é grande./x~(Dodec(x) & Large(x))
+;Alguma coisa não é um dodecaedro grande~/x(Dodec(x)& Large(x))
+;Não se dá o caso de alguma coisa ser um dodecaedro grande~/x(Cube(x) & LeftOf(b, x))
+;b não está à esquerda de um cubo.s=179906;

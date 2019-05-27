@@ -1,0 +1,16 @@
+7.2.4.28445wnds:Windows 86.2SntFC1541594731887D1541595897902D1541596560865D1541597271135C1542143168081D1542145179606D1542145250613C1542145308830D1542145570873C1542318502401D1542319210760D1542319210939S3046810;Só os objetos grandes nada têm à sua frente.
+;Todos os objetos sem nada à frente são grandes
+@x [~/y(FrontOf(y,x)) $ Large(x)];Se um cubo tiver algo à sua frente, então é pequeno.
+;Todos os cubos que tiverem algum objeto à sua frente é pequeno
+@x[(Cube(x) & /y(FrontOf(y,x))) $ Small(x)];Todos os cubos atrás de um dodecaedro são mais pequenos que este.
+@x@y[(Cube(x) & Dodec(y) & BackOf(x,y)) $ Smaller(x,y)];Se e estiver entre dois objetos então são ambos pequenos.
+;Quaisquer 2 objetos entre os quais e se encontra são pequenos
+@x@y(Between(e,x,y)$ (Small(y) & Small(x)));Se um tetraedro estiver entre dois objetos então são ambos pequenos.
+@x@y@z[(Tet(z) & Between(z,x,y))$ (Small(y) & Small(x))];Todos os dodecaedros são, pelo menos, tão grandes como todos os cubos.
+@x@y[(Dodec(x) & Cube(y))$(SameSize(x,y) | Larger(x,y))];Se um cubo estiver à direita de um dodecaedro, mas não atrás dele, então ele é tão grande como o dodecaedro
+@x@y[(Cube(x) & Dodec(y) & RightOf(x,y) & ~BackOf(x,y)) $ SameSize(x,y) ];Nenhum cubo sem nada à sua esquerda está entre dois cubos
+@x[(Cube(x) & ~/y(LeftOf(x,y)))$~(/z/t(Cube(z) & Cube(t) & Between(x,z,t)))];Os únicos cubos grandes são b e c
+Cube(b) & Cube(c) & Large(b) & Large(c) & @x((Cube(x) & Large(x)) $ (x=b | x=c))
+ ;Outra hipótese: ~/x(Cube(x) & Large(x) & x#b & x#c) & Cube(b) & Large(c) & Cube(c) & Large(b);No máximo, b e c são cubos grandes.
+@x((Cube(x) & Large(x)) $ (x=b | x=c))
+ ;Outra hipótese: ~/x[Cube(x) & Large(x) & x#b & x#c]s=265042;

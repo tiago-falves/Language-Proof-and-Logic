@@ -1,0 +1,5 @@
+7.2.4.28445wnds:Windows 86.2SntFC1540122308412D1540123452760S87798~FrontOf(b,c) & SameCol(d,f) & LeftOf(f,b)~( LeftOf(b,c) | ~Adjoins(b,d) )
+BackOf(a,f) & FrontOf(f,e) & ~LeftOf(a,b)Between(d,a,e) & ~( Tet(e) | Dodec(b) )
+ (c=d) & SameShape(a,f) & ( Tet(c) | Tet(b) )~( ~SameShape(b,e) | SameShape(a,d) )
+ (~Cube(a) | Tet(f)) & (Dodec(f) | ~Dodec(a))Larger(e,c) & ~Larger(b,f) & Larger(c,f) & ~Smaller(a,e)
+s=64910;
